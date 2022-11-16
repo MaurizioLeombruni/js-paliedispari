@@ -9,21 +9,41 @@
 </head>
   <body>
     
-    <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
 
-      <div class="row m-0 bg-success">
-        <div class="col-auto text-center">
+      <div class="row bg-success">
+        <div class="col-auto text-center px-3 py-2">
           <h1>Esercizio Pali e Dispari</h1>
         </div>
       </div>
 
-      <div class="row m-auto mt-5 justify-content-center">
+      <div class="row mt-5 justify-content-center">
         <div class="col-sm-6 mx-3 p-3 border border-3 border-dark rounded bg-info">
-
+          <div class="mb-3">
+            <label for="inputWord" class="form-label">Verifica se una parola è palindroma</label>
+            <input type="text" class="form-control" id="inputWord" placeholder="Inserisci qui la parola...">
+            <button type="button" class="btn btn-primary mt-3">Esegui</button>
+          </div>
         </div>
 
         <div class="col-sm-4 mx-3 p-3 border border-3 border-dark rounded bg-warning">
+          <div class="row">
+            <div class="col-auto">
+              <h5>Pari o Dispari</h5>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-auto mt-3">
+              <button type="button" class="btn btn-success m-3">Pari</button>
+              <button type="button" class="btn btn-danger m-3">Dispari</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="row m-auto mt-5 px-4">
+        <div class="col-auto">
+          <p id="infoBox"></p>
         </div>
       </div>
 
