@@ -19,7 +19,7 @@
 
       <div class="row mt-5 justify-content-center">
         <div class="col-sm-6 mx-3 p-3 border border-3 border-dark rounded bg-info">
-          <div class="mb-3">
+          <div class="my-5">
             <label for="inputWord" class="form-label">Verifica se una parola è palindroma</label>
             <input type="text" class="form-control" id="inputWord" placeholder="Inserisci qui la parola...">
             <button type="button" class="btn btn-primary mt-3" onclick="checkPalindrome()">Esegui</button>
@@ -34,8 +34,12 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-auto mt-3">
-              <button type="button" class="btn btn-success m-3" onclick="playEven()">Pari</button>
-              <button type="button" class="btn btn-danger m-3" onclick="playOdd()">Dispari</button>
+              <div class="mb-3">
+                <label for="inputNumber" class="form-label">Inserisci un numero da 1 a 5</label>
+                <input type="text" class="form-control" id="inputNumber" placeholder="Numero da 1 a 5">
+              </div>
+              <button type="button" class="btn btn-success m-3" onclick="playEven()">Gioca pari</button>
+              <button type="button" class="btn btn-danger m-3" onclick="playOdd()">Gioca dispari</button>
             </div>
           </div>
         </div>

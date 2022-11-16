@@ -38,13 +38,23 @@ function checkPalindrome(){
     infoBox.innerHTML = "La parola è palindroma!";
 }
 
-//La funzione playEven() randomizza due numeri da 1 a 5, e poi li somma. Se la somma è pari, diamo un messaggio di vittoria con l'infoBox.
+//La funzione playEven() prende il numero inserito dall'utente e randomizza quello del computer. Entrambi i numeri sono compresi tra 1 e 5.
+//I numeri vengono poi sommati, e se la loro somma è pari, l'utente ha vinto.
 
 function playEven(){
 
-    //Randomizziamo i due numeri, assicurandoci di avere 2 numeri interi (con Math.floor) compresi tra 1 e 5.
+    //Prendiamo il valore inserito dall'utente.
+    //SANITY CHECK: se l'elemento inserito non è un numero, o non è compreso tra 1 e 5, l'input viene considerato invalido e termina la funzione
+    //con un messaggio di errore.
 
-    let numPlayer = (Math.floor(Math.random() * 5)) + 1;
+    let numPlayer = document.getElementById('inputNumber').value;
+    numPlayer = parseInt(numPlayer);
+
+    if(isNaN(numPlayer) || numPlayer < 1 || numPlayer > 5){
+        infoBox.innerHTML = "Numero inserito non valido.";
+        return false;
+    }
+
     let numCPU = (Math.floor(Math.random() * 5)) + 1;
 
     //console.log(numPlayer);
@@ -67,7 +77,14 @@ function playEven(){
 
 function playOdd(){
 
-    let numPlayer = (Math.floor(Math.random() * 5)) + 1;
+    let numPlayer = document.getElementById('inputNumber').value;
+    numPlayer = parseInt(numPlayer);
+
+    if(isNaN(numPlayer) || numPlayer < 1 || numPlayer > 5){
+        infoBox.innerHTML = "Numero inserito non valido.";
+        return false;
+    }
+
     let numCPU = (Math.floor(Math.random() * 5)) + 1;
 
     //console.log(numPlayer);
